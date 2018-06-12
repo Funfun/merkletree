@@ -5,9 +5,8 @@ import (
 )
 
 type Node struct {
-	Hash      string
-	LeftNode  *Node
-	RightNode *Node
+	Hash        string
+	Left, Right *Node
 }
 
 func NewNode(hash string, left *Node, right *Node) *Node {
@@ -24,8 +23,8 @@ func DepthFirstSearch(node *Node, result *[]*Node) {
 		return
 	}
 
-	DepthFirstSearch(node.LeftNode, result)
-	DepthFirstSearch(node.RightNode, result)
+	DepthFirstSearch(node.Left, result)
+	DepthFirstSearch(node.Right, result)
 
 	*result = append(*result, node)
 }
