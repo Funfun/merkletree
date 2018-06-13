@@ -8,3 +8,7 @@ import (
 func Hash(data string) [32]byte {
 	return sha256.Sum256([]byte(data))
 }
+
+func HashNode(hash []byte) [32]byte {
+	return sha256.Sum256(hash)
+}
