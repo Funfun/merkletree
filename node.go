@@ -1,15 +1,18 @@
 package merkletree
 
 import (
+	"crypto/sha256"
 	"fmt"
 )
 
+const Size = sha256.Size
+
 type Node struct {
-	Hash        string
+	Hash        [Size]byte
 	Left, Right *Node
 }
 
-func NewNode(hash string, left *Node, right *Node) *Node {
+func NewNode(hash [Size]byte, left *Node, right *Node) *Node {
 	return &Node{hash, left, right}
 }
 
