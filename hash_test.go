@@ -9,4 +9,5 @@ import (
 
 func TestHash(t *testing.T) {
 	assert.Equal(t, Hash("189"), sha256.Sum256([]byte("189")))
+	assert.Equal(t, Hash("189"), Hash("189"))
 }
