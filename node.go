@@ -17,7 +17,7 @@ func NewNode(hash [Size]byte, left *Node, right *Node) *Node {
 }
 
 func (n Node) String() string {
-	return fmt.Sprintf("Node => Hash: %s", n.Hash)
+	return fmt.Sprintf("Node => Hash: %x", n.Hash)
 }
 
 // Post-order (LRN) search
