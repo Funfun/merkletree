@@ -15,7 +15,8 @@ func (t Tree) Root() *Node {
 
 // AddNode adds node to Tree
 func (t *Tree) AddNode(node *Node) {
-	if t.root == nil {
+	if t.Root() == nil {
 		t.root = NewNode(HashNode(node.Hash[:]), node, nil)
+		return
 	}
 }
