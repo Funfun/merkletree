@@ -18,7 +18,7 @@ func TestGetRoot(t *testing.T) {
 func TestAddNodeToTree(t *testing.T) {
 	// when tree has no nodes
 	tree := NewTree()
-	node := NewNode(Hash("data"), nil, nil)
+	node := NewLeaf("0")
 	tree.AddNode(node)
 	assert.NotNil(t, node)
 	assert.Nil(t, tree.Root().Right)

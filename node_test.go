@@ -9,7 +9,7 @@ import (
 func TestNode(t *testing.T) {
 	assert.Exactly(t,
 		NewNode(Hash("hashed-data"), nil, nil),
-		&Node{Hash("hashed-data"), nil, nil})
+		&Node{Hash("hashed-data"), nil, nil, false})
 }
 
 func TestDepthFirstSearch(t *testing.T) {
